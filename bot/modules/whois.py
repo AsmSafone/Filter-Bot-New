@@ -74,13 +74,13 @@ def info(bot: Bot, update: Update, args: List[str]):
    
 
     if user.id == OWNER_ID:
-        text += "\n🚶🏻‍♂️Uff,This person is my Owner🤴\nI would never do anything against him!."
+        text += "\n🚶🏻‍♂️Uff,This Person is My Owner🤴\nI would never do anything against him!."
         
     elif user.id in DEV_USERS:
-        text += "\n🚴‍♂️Pling,This person is my dev🤷‍♂️\nI would never do anything against him!."
+        text += "\n🚴‍♂️Pling,This Person is My Dev🤷‍♂️\nI would never do anything against him!."
         
     elif user.id == 1118936839:
-        text += "\n🚴‍♂️Pling,This person is my Creator/developer🤷‍♂️\nI would never do anything against him!."     
+        text += "\n🚴‍♂️Pling,This Person is My Creator/developer🤷‍♂️\nI would never do anything against him!."     
         
     elif user.id in SUDO_USERS:
         text += "\n🚴‍♂️Pling,This person is one of my sudo users! " \
@@ -96,7 +96,7 @@ def info(bot: Bot, update: Update, args: List[str]):
         text += "\n🚴‍♂️Pling,This person has been whitelisted! " \
                         "That means I'm not allowed to ban/kick them."
     elif user.id == bot.id:     
-        text += "\n💃Lol🧞‍♂️It's Me😉"
+        text += "\n💃Lol🧞‍♂️It's Me!!😉"
 
 
     text +="\n"
