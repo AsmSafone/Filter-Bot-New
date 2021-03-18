@@ -187,7 +187,7 @@ def callback_button(bot: Bot, update: Update):
             chat_count = get_muted_chats(bot, update, True)
             bot.sendMessage(chat_id, f"Left {chat_count} chats.")
         else:
-            query.answer("You are not allowed to use this.")
+            query.answer("You Are Not Allowed To Do This!")
     elif query_type == "db_cleanup":
         if query.from_user.id in admin_list:
             bot.editMessageText("Cleaning up DB ...", chat_id, message.message_id)
@@ -196,7 +196,7 @@ def callback_button(bot: Bot, update: Update):
             reply = "Cleaned up {} chats and {} gbanned users from db.".format(invalid_chat_count, invalid_gban_count)
             bot.sendMessage(chat_id, reply)
         else:
-            query.answer("You are not allowed to use this.")
+            query.answer("You Are Not Allowed To Do This!")
 
 
 
@@ -208,5 +208,5 @@ dispatcher.add_handler(DB_CLEANUP_HANDLER)
 dispatcher.add_handler(LEAVE_MUTED_CHATS_HANDLER)
 dispatcher.add_handler(BUTTON_HANDLER)
 
-__mod_name__ = "DB Cleanup"
+__mod_name__ = "Database"
 __handlers__ = [DB_CLEANUP_HANDLER, LEAVE_MUTED_CHATS_HANDLER, BUTTON_HANDLER]
