@@ -121,8 +121,8 @@ def connect_chat(bot: Bot, update: Update, args: List[str]):
             gethistory = sql.get_history_conn(user.id)
             if gethistory:
                 buttons = [
-                    InlineKeyboardButton(text="❎ Close button", callback_data="connect_close"),
-                    InlineKeyboardButton(text="🧹 Clear history", callback_data="connect_clear")
+                    InlineKeyboardButton(text="✖️ Close Button", callback_data="connect_close"),
+                    InlineKeyboardButton(text="🧹 Clear History", callback_data="connect_clear")
                 ]
             else:
                 buttons = []
@@ -134,7 +134,7 @@ def connect_chat(bot: Bot, update: Update, args: List[str]):
             else:
                 text = "_Write the chat ID or tag to connect!_"
             if gethistory:
-                text += "\n\n*Connection history:*\n"
+                text += "\n\n*Connection History:*\n"
                 text += "╒═══「 *Info* 」\n"
                 text += "│  Sorted: `Newest`\n"
                 text += "│\n"
@@ -307,5 +307,5 @@ dispatcher.add_handler(ALLOW_CONNECTIONS_HANDLER)
 dispatcher.add_handler(HELP_CONNECT_CHAT_HANDLER)
 dispatcher.add_handler(CONNECT_BTN_HANDLER)
 
-__mod_name__ = "Connection🧩"
+__mod_name__ = "Connection"
 __handlers__ = [CONNECT_CHAT_HANDLER, CONNECTION_CHAT_HANDLER, DISCONNECT_CHAT_HANDLER, ALLOW_CONNECTIONS_HANDLER, HELP_CONNECT_CHAT_HANDLER, CONNECT_BTN_HANDLER]
